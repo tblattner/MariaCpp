@@ -1,6 +1,6 @@
 # ****************************************************************************
 #  Copyright (C) 2015 Karol Roslaniec <mariacpp@roslaniec.net>
-# 
+#
 #  This library is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU Lesser General Public
 #  License as published by the Free Software Foundation; either
@@ -18,7 +18,7 @@
 # ****************************************************************************
 
 FILE(GLOB SRC *.cpp *.c)
-INCLUDE_DIRECTORIES(${MARIADB_INCLUDE_DIR} ${CMAKE_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${MARIADB_INCLUDE_DIR})
 ADD_LIBRARY(mariacpp STATIC ${SRC})
 
 INSTALL(TARGETS mariacpp
