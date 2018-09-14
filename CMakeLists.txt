@@ -26,7 +26,7 @@ SET(CPACK_PACKAGE_VERSION_PATCH 0)
 SET(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
 
 
-INCLUDE(${CMAKE_SOURCE_DIR}/cmake/FindMariaDB.cmake)
+#INCLUDE(${CMAKE_SOURCE_DIR}/cmake/FindMariaDB.cmake)
 
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 find_package(Threads REQUIRED)
@@ -36,10 +36,10 @@ if (CMAKE_USE_PTHREADS_INIT)
 endif()
   
 
-enable_testing()
+#enable_testing()
 add_subdirectory(mariacpp)
 add_subdirectory(src)
-add_subdirectory(test)
+#add_subdirectory(test)
 
 
 SET(CPACK_GENERATOR "TGZ")
