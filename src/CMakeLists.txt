@@ -18,7 +18,7 @@
 # ****************************************************************************
 
 FILE(GLOB SRC *.cpp *.c)
-INCLUDE_DIRECTORIES(${MARIADB_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${MARIADB_INCLUDE_DIR} .)
 ADD_LIBRARY(mariacpp STATIC ${SRC})
 
 INSTALL(TARGETS mariacpp
