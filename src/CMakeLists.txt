@@ -18,7 +18,7 @@
 # ****************************************************************************
 
 FILE(GLOB SRC *.cpp *.c)
-set(MARIADB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include" CACHE STRING "")
+set(MARIADB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 INCLUDE_DIRECTORIES(${MARIADB_INCLUDE_DIR} .)
 ADD_LIBRARY(mariacpp STATIC ${SRC})
@@ -29,3 +29,4 @@ INSTALL(TARGETS mariacpp
   ARCHIVE DESTINATION lib
   )
 
+mark_as_advanced(MARIADB_INCLUDE_DIR)
